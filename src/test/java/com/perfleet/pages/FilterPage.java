@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class FilterPage<Webelement> extends BasePage {
+public class FilterPage extends BasePage {
 
     //rehan
     @FindBy(css = "a[title=\"Filters\"]")
@@ -61,9 +61,6 @@ public class FilterPage<Webelement> extends BasePage {
 
     @FindBy(css = "td[class='string-cell grid-cell grid-body-cell grid-body-cell-Driver']")
     public List<WebElement> driverDroplistFP;
-
-
-
 
     public WebElement dmethodFP(String method) {
         WebElement drivermethod = null;

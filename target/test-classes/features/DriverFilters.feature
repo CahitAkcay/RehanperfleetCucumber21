@@ -8,7 +8,7 @@ Feature: Driver Filters
     Given the user is logged in as "store Manager"
     When  the user navigate to "Fleet" and "Vehicles"
 
-  @PERF-1015 @PERF-1016 @Rehan @z
+  @PERF-1015 @PERF-1016 @Rehan
   Scenario: As a user, I should be able to navigate to driver filters
     When the user click on the "Driver" option
     Then the user should see following methods

@@ -34,7 +34,29 @@ public class VehiclePage extends BasePage {
     @FindBy(id="ui-multiselect-0-0-option-1")
     public WebElement tags;
 
+    @FindBy(xpath = "//label//span[contains(text(),'Driver')]")
+    public WebElement driverFilterVP;
 
+    @FindBy(css = "input[type='search']")
+    public WebElement searchBoxVP;
+
+    @FindBy (css = "label[title='Tags']")
+    public WebElement tagsButtonVP;
+
+    @FindBy (css = "label[title='License Plate']")
+    public WebElement licencePlateVP;
+
+    @FindBy(css = "a[title='Reset']")
+    public WebElement resetButton;
+
+    public void multipleFilters(){
+        licencePlateVP.click();
+        tagsButtonVP.click();
+        driverFilterVP.click();
+    }
+
+    @FindBy (xpath = "//ul[@class='ui-multiselect-checkboxes ui-helper-reset fixed-li']//li")
+    List <WebElement> mngFilterDropdownVP;
 
     public  void selectFilterBox(){
         List<WebElement> options = Driver.get().findElements(By.xpath("//input[@name='multiselect_0']"));
